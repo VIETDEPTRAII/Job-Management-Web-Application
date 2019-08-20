@@ -24,14 +24,14 @@ DROP TABLE IF EXISTS `jobs`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `jobs` (
   `job_id` int(11) NOT NULL AUTO_INCREMENT,
-  `jobname` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `jobtype` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `salary` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `company` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `location` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `desc` text COLLATE utf8_unicode_ci,
+  `jobname` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `jobtype` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `salary` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `company` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `location` varchar(45) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
+  `desc` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
   PRIMARY KEY (`job_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `jobs` (
 
 LOCK TABLES `jobs` WRITE;
 /*!40000 ALTER TABLE `jobs` DISABLE KEYS */;
-INSERT INTO `jobs` VALUES (1,'Full Stack Developer','Full Time','$2000','Facebook','New York City, USA','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, iure beatae! Voluptas tempora doloremque atque repudiandae maiores odio magni. Illo ut nihil officia numquam in. Deleniti pariatur at minima quaerat!');
+INSERT INTO `jobs` VALUES (1,'Full Stack Developer','Full Time','$2000','Facebook','New York City, USA','Implementation of Web/Java application Implementation of Rest APIs '),(2,'Front-end Developer','Full Time','$1500','Google','New York City, USA','Being responsible for designing, developing VietTech products and outsourcing on the .NET/JAVA(Backend), Angular (Frontend) platform. Possess problem...'),(3,'Back-end Developer','Full Time','$1600','Microsoft','Orlando City, USA','Salary: Up to 1,600 USD (and + 1 Month Base Salary Bonus) To guide and assist junior members in development work and knowledge sharing. Help in...'),(4,'Spring Boot Developer','Full Time','$1900','ISC Quang trung','Ho Chi Minh City, VietNam','We need Java Backend Developers who love startup and open-minded environmentYour responsibilities will include:  Implement the microservices on backend...'),(6,'AngularJS Developer','Part Time','$1200','ISC Quang Trung','Ho Chi Minh City, VietNam','We are seeking an experienced Frontend Web Developer Develop a web system which delivers a lot of value to US market Work in Web Projects under...');
 /*!40000 ALTER TABLE `jobs` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,7 +53,7 @@ DROP TABLE IF EXISTS `users`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `username` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   `password` varchar(150) CHARACTER SET utf8 COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -78,4 +78,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-20 14:46:07
+-- Dump completed on 2019-08-20 22:46:03
