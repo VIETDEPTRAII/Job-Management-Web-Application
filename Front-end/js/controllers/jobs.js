@@ -1,6 +1,6 @@
 (function (module) {
 
-module.controller('JobsCtrl', function($scope, $http, $window) {
+module.controller('JobsCtrl', function($scope, $http) {
 
   //Get jobs
   $http({
@@ -11,5 +11,6 @@ module.controller('JobsCtrl', function($scope, $http, $window) {
     },function myError(response) {
       $scope.searched = response.statusText;
   });
+
 });
 }(angular.module("myApp")));

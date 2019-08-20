@@ -5,8 +5,9 @@ app.config(function($routeProvider) {
         templateUrl : "user/mainpage.html",
         controller:  "JobsCtrl"
     })
-    .when("/red", {
-        templateUrl : "red.htm"
+    .when("/job-detail/:id", {
+        templateUrl : "job-single.html",
+        controller: "Job-Details-Ctrl"
     })
     .when("/green", {
         templateUrl : "green.htm"
