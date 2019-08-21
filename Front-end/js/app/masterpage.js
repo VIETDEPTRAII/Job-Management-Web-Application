@@ -2,7 +2,7 @@ var app = angular.module("myApp", ["ngRoute"]);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "user/mainpage.html",
+        templateUrl : "main.html",
         controller:  "JobsCtrl"
     })
     .when("/job-detail/:id", {
